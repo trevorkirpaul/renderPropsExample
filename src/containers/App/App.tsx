@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
 import Toggle from '../../components/ToggleRPC'
+import Title from '../../components/Title'
+import Button from '../../components/Button'
 
 import { AppProps, AppState } from './types'
 
@@ -11,8 +13,8 @@ class App extends Component<AppProps, AppState> {
         <Toggle>
           {({ on, toggle }: { on: boolean; toggle: () => any }) => (
             <React.Fragment>
-              {on && <h1>Show Me</h1>}
-              <button onClick={toggle}>Show/Hide</button>
+              <Title heading="Render Props" subHeading="React" on={on} />
+              <Button onClick={toggle} label="Show/hide" />
             </React.Fragment>
           )}
         </Toggle>
